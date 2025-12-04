@@ -2,6 +2,7 @@
 FROM httpd:alpine3.22
 
 RUN apk --no-cache add bash && \
+    apk --no-cache upgrade && \
     rm -rf /var/cache/apk/*
 
 # Copy your project files to the Apache web root directory
