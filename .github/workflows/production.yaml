@@ -1,8 +1,9 @@
-name: Deploy
+name: Production Deploy
 
 on:
   push:
-    branches: [ main ]
+    tags:
+      - 'v*.*.*'
 
 permissions:
   contents: read
@@ -30,9 +31,9 @@ jobs:
           username: '${{ secrets.IMAGE_REGISTRY_USER }}'
           password: '${{ secrets.IMAGE_REGISTRY_TOKEN }}'
 
-      - name: Get short SHA
-        id: sha
-        run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+      - name: Get tag
+        id: tag
+        run: echo "version=${GITHUB_REF_NAME}" >> $GITHUB_OUTPUT
 
       - name: Build and push image
         uses: docker/build-push-action@v6
@@ -40,5 +41,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ vars.IMAGE_REGISTRY }}/${{ vars.IMAGE_REGISTRY_NAMESPACE }}/${{ github.event.repository.name }}:${{ steps.sha.outputs.short_sha }}
-            ${{ vars.IMAGE_REGISTRY }}/${{ vars.IMAGE_REGISTRY_NAMESPACE }}/${{ github.event.repository.name }}:latest
+            ${{ vars.IMAGE_REGISTRY }}/${{ vars.IMAGE_REGISTRY_NAMESPACE }}/${{ github.event.repository.name }}:${{ steps.tag.outputs.version }}
+            ${{ vars.IMAGE_REGISTRY }}/${{ vars.IMAGE_REGISTRY_NAMESPACE }}/${{ github.event.repository.name }}:production
