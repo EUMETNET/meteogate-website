@@ -16,6 +16,7 @@
 
 body {
   margin: 0;
+  min-width: 260px;
 }
 
 .border-top {
@@ -111,7 +112,9 @@ h1 {
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
-  line-height: 48px; 
+  line-height: 48px;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 h2 {
@@ -732,6 +735,16 @@ button.secondary.large:focus-visible {
       url('images/background-image-mobile.jpg');
     background-position: center, center, top;
     background-size: cover;
+  }
+
+  #content-wrapper {
+    padding: 0 15px;
+  }
+
+  #logo-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
   }
 
   #data-explorer-content {
