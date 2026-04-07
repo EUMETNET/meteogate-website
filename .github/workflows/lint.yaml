@@ -1,8 +1,8 @@
 name: Lint
 
 on:
-  push:
-    branches: [add-service-bar-notifications]
+  pull_request:
+    branches: [main]
     paths:
       - 'notifications.json'
 
