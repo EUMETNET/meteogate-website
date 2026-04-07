@@ -6,7 +6,7 @@ RUN apk --no-cache add bash && \
     rm -rf /var/cache/apk/*
 
 # Copy your project files to the Apache web root directory
-COPY index.html main.css /usr/local/apache2/htdocs/
+COPY index.html main.css notifications.json /usr/local/apache2/htdocs/
 COPY icons/ /usr/local/apache2/htdocs/icons/
 COPY images/ /usr/local/apache2/htdocs/images/
 COPY logos/ /usr/local/apache2/htdocs/logos/
