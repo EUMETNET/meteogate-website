@@ -587,14 +587,42 @@ button.secondary.large:focus-visible {
 
 #service-bar-content {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
+  flex-direction: column;
+  gap: 0;
   max-width: 1280px;
   padding: 0 40px;
   width: 100%;
   align-self: center;
   margin: 0 auto;
+}
+
+.service-bar-item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.service-bar-item:last-child {
+  border-bottom: none;
+}
+
+.service-bar-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--color-black, #000);
+  padding: 0 8px;
+  margin-left: auto;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.service-bar-close:hover {
+  opacity: 1;
 }
 
 .footer-row {
