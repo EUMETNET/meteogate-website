@@ -1,0 +1,25 @@
+name: Lint
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'notifications.json'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Validate notifications file
+        run: |
+          echo "Validating notifications.json..."
+          jq empty notifications.json
+          echo "notifications.json is valid JSON file."
