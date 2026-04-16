@@ -1,12 +1,12 @@
 [
   {
-    "validUntilUtc": "2000-01-01T00:00:00Z",
-    "message": "Example of a notification message with a link. This notification has expired and will not be displayed.",
+    "validUntilUtc": "2026-04-23T00:00:00Z",
+    "message": "Example of a notification message with a link. This notification is valid until 2026-04-23, and will not be displayed after that date.",
     "linkText": "Read more",
     "linkUrl": "https://eumetnet.github.io/meteogate-documentation/"
   },
   {
-    "validUntilUtc": "2000-01-01T00:00:00Z",
-    "message": "Example of a simple notification message. This notification has expired and will not be displayed."
+    "validUntilUtc": "2026-04-23T00:00:00Z",
+    "message": "Example of a simple notification message. This notification is valid until 2026-04-23, and will not be displayed after that date."
   }
 ]
