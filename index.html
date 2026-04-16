@@ -12,14 +12,8 @@
 
 <body>
   <div id="main-container">
-    <div id="service-bar">
-      <!--div id="service-bar-content">
-        <img src="icons/triangle-alert.svg" alt="Triangle Alert Icon">
-        <p>
-          Lorem ipsum dolor sit amet consectetur porttitor vel ultrices dui ut eros
-          <a class="text-black text-underline" name="Link service bar read more" href="" target="_blank">Read more</a>
-        </p>
-    </div-->
+    <div id="service-bar" style="display:none;">
+      <div id="service-bar-content"></div>
     </div>
     <div id="content-wrapper">
       <div id="logo-container">
@@ -476,6 +470,67 @@
         </div>
       </div>
     </div>
+  </div>
+  <script>
+    fetch('notifications.json', { cache: 'no-cache' })
+      .then((response) => {
+        if (!response.ok) throw new Error('Failed to fetch notifications');
+        return response.json();
+      })
+      .then((notifications) => {
+        if (!Array.isArray(notifications)) return;
+        const now = Date.now();
+        const active = notifications.filter((n) =>
+          n.message && n.validUntilUtc && now <= new Date(n.validUntilUtc).getTime()
+        );
+        if (active.length === 0) return;
+
+        const serviceBar = document.getElementById('service-bar');
+        const serviceBarContent = document.getElementById('service-bar-content');
+
+        active.forEach((data) => {
+          const item = document.createElement('div');
+          item.className = 'service-bar-item';
+
+          const alertIcon = document.createElement('img');
+          alertIcon.src = 'icons/triangle-alert.svg';
+          alertIcon.alt = 'Triangle Alert Icon';
+          item.appendChild(alertIcon);
+
+          const p = document.createElement('p');
+          p.textContent = data.message;
+          if (data.linkText && data.linkUrl && /^https?:\/\//.test(data.linkUrl)) {
+            p.appendChild(document.createTextNode(' '));
+            const link = document.createElement('a');
+            link.className = 'text-black text-underline';
+            link.href = data.linkUrl;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.textContent = data.linkText;
+            p.appendChild(link);
+          }
+          item.appendChild(p);
+
+          const closeBtn = document.createElement('button');
+          closeBtn.className = 'service-bar-close';
+          closeBtn.setAttribute('aria-label', 'Dismiss notification');
+          closeBtn.textContent = '\u00D7';
+          closeBtn.addEventListener('click', () => {
+            item.remove();
+            if (serviceBarContent.children.length === 0) {
+              serviceBar.style.display = 'none';
+            }
+          });
+          item.appendChild(closeBtn);
+
+          serviceBarContent.appendChild(item);
+        });
+        serviceBar.style.display = 'flex';
+      })
+      .catch((error) => {
+        console.error('Failed to load notifications:', error);
+      });
+  </script>
 </body>
 
 </html>
