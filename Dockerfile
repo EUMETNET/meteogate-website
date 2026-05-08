@@ -1,5 +1,5 @@
 # Use the official Apache HTTPD image
-FROM httpd:alpine3.22
+FROM httpd:alpine3.23
 
 RUN apk --no-cache add bash && \
     apk --no-cache upgrade && \
