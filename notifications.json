@@ -14,9 +14,5 @@
     "message": "Open Radar Data (ORD) API is now fully open and operational. IP - range whitelisting is no longer needed.",
     "linkText": "More information",
     "linkUrl": "https://github.com/EUMETNET/openradardata-documentation/raw/main/docs/attachments/ORD_API_newsletter_20052026_vs2.pdf"
-  },
-  {
-    "validUntilUtc": "2026-06-01T00:00:00Z",
-    "message": "Service disruption Open Radar Data (ORD): OPERA NIMBUS ACCR and RATE are currently unavailable. The issue is being investigated. We apologize for the inconvenience."
   }
 ]
