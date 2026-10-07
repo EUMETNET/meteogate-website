@@ -17,6 +17,9 @@
 # Pages
 !faq/
 
+# Server config
+!caching.conf
+
 # Re-exclude junk that may live inside the allowed directories
 **/.DS_Store
 **/._*
