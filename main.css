@@ -168,7 +168,24 @@ h6 {
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
-  line-height: 24px; 
+  line-height: 24px;
+}
+
+/* Decoupled heading sizes: lets a tag's semantic level (h1-h6, document order)
+   differ from its visual size (set via these classes) */
+.text-size-34 {
+  font-size: 34px;
+  line-height: 40px;
+}
+
+.text-size-28 {
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.text-size-18 {
+  font-size: 18px;
+  line-height: 24px;
 }
 
 p {
