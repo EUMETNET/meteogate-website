@@ -19,6 +19,7 @@ COPY faq/ /usr/local/apache2/htdocs/faq/
 COPY icons/ /usr/local/apache2/htdocs/icons/
 COPY images/ /usr/local/apache2/htdocs/images/
 COPY logos/ /usr/local/apache2/htdocs/logos/
+COPY fonts/ /usr/local/apache2/htdocs/fonts/
 COPY caching.conf /usr/local/apache2/conf/extra/compression-caching.conf
 
 # Ensure proper file permissions (non-root user)
