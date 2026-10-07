@@ -94,18 +94,21 @@
       <div id="service-bar-content"></div>
     </div>
     <div id="content-wrapper">
-      <div id="logo-container">
-        <div id="logo">
-          <img src="logos/Logo-MeteoGate-EUMETNET-(flat).svg" alt="MeteoGate Logo">
+      <header style="display:contents">
+        <div id="logo-container">
+          <div id="logo">
+            <img src="logos/Logo-MeteoGate-EUMETNET-(flat).svg" alt="MeteoGate Logo">
+          </div>
+          <div id="cofound-logo">
+            <img src="logos/EU-Co-funded-by-the-European-Union.png" alt="Co-funded by the European Union Logo">
+          </div>
         </div>
-        <div id="cofound-logo">
-          <img src="logos/EU-Co-funded-by-the-European-Union.png" alt="Co-funded by the European Union Logo">
-        </div>
-      </div>
 
-      <div id="header-container">
-        <h1 class="text-white"><span class="text-sherpa400">Discover</span> and <span class="text-sherpa400">access</span> European meteorological data and information</h1>
-      </div>
+        <div id="header-container">
+          <h1 class="text-white"><span class="text-sherpa400">Discover</span> and <span class="text-sherpa400">access</span> European meteorological data and information</h1>
+        </div>
+      </header>
+      <main style="display:contents">
       <div id="content">
         <h2 class="text-white text-size-28">Featured European APIs providing data across Europe</h2>
         <div class="cards-container">
@@ -255,7 +258,8 @@
         </div>
 
       </div>
-      <div id="third-content">
+      </main>
+      <nav id="third-content" aria-label="Resources and support">
         <div id="content-row">
           <div class="third-content-box">
             <div class="third-content-box-title">
@@ -407,10 +411,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </nav>
 
     </div>
-    <div id="footer-container">
+    <footer id="footer-container">
       <div id="footer-content">
         <div class="footer-row">
           <img id="footer-logo" src="logos/Eumetnet-logo.svg" alt="EUMETNET Logo">
@@ -538,7 +542,7 @@
           </a>
         </div>
       </div>
-    </div>
+    </footer>
   </div>
   <script>
     fetch('notifications.json', { cache: 'no-cache' })
