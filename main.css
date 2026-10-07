@@ -423,6 +423,30 @@ button.secondary.large:focus-visible {
   flex-wrap: nowrap;
 }
 
+#faq-content {
+  display: flex;
+  padding-top: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+  border-top: 1px solid var(--color-white, #FFF);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: stretch;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -597,8 +621,9 @@ button.secondary.large:focus-visible {
   gap: 40px;
   padding: 0 40px;
   align-items: center;
+  box-sizing: border-box;
+  width: 100%;
   max-width: 1280px;
-  align-self: center;
   margin: 0 auto;
 }
 

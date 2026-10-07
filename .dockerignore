@@ -14,6 +14,9 @@
 !images/
 !logos/
 
+# Pages
+!faq/
+
 # Re-exclude junk that may live inside the allowed directories
 **/.DS_Store
 **/._*
