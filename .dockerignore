@@ -1,5 +1,24 @@
-.git/
-.github/
-.dockerignore
-Dockerfile
-README.md
+# Allowlist: exclude everything, then include only what the Dockerfile copies.
+# Keep in sync with the COPY instructions in the Dockerfile.
+*
+
+# Site files
+!index.html
+!main.css
+!notifications.json
+!robots.txt
+!sitemap.xml
+
+# Asset directories
+!icons/
+!images/
+!logos/
+
+# Re-exclude junk that may live inside the allowed directories
+**/.DS_Store
+**/._*
+**/Thumbs.db
+**/Desktop.ini
+**/*.swp
+**/*.swo
+**/*~
