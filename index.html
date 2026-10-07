@@ -4,13 +4,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MeteoGate</title>
+  <title>MeteoGate | Discover &amp; Access European Meteorological Data</title>
+  <meta name="description" content="MeteoGate is EUMETNET's gateway to open meteorological data — discover and access weather radar, warnings, surface observations and climate APIs.">
+  <link rel="canonical" href="https://meteogate.eu/">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/eumetnet_32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/eumetnet_192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/eumetnet_180x180.png">
+  <meta name="msapplication-TileImage" content="icons/eumetnet_270x270.png">
+  <meta name="msapplication-TileColor" content="#009AA1">
+  <meta name="theme-color" content="#009AA1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://meteogate.eu/">
+  <meta property="og:site_name" content="MeteoGate">
+  <meta property="og:title" content="MeteoGate | Discover & Access European Meteorological Data">
+  <meta property="og:description" content="MeteoGate is EUMETNET's gateway to open meteorological data — discover and access weather radar, warnings, surface observations and climate APIs.">
+  <meta property="og:image" content="https://meteogate.eu/icons/eumetnet_270x270.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MeteoGate | Discover & Access European Meteorological Data">
+  <meta name="twitter:description" content="MeteoGate is EUMETNET's gateway to open meteorological data — discover and access weather radar, warnings, surface observations and climate APIs.">
+  <meta name="twitter:image" content="https://meteogate.eu/icons/eumetnet_270x270.png">
+
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Heebo&display=swap">
 </head>
 
 <body>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://meteogate.eu/#organization",
+        "name": "EUMETNET",
+        "url": "https://www.eumetnet.eu",
+        "logo": "https://meteogate.eu/logos/Eumetnet-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://meteogate.eu/#website",
+        "url": "https://meteogate.eu/",
+        "name": "MeteoGate",
+        "description": "MeteoGate is EUMETNET's gateway to open meteorological data — discover and access weather radar, warnings, surface observations and climate APIs.",
+        "publisher": { "@id": "https://meteogate.eu/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Dataset",
+        "name": "Open Radar Data (ORD)",
+        "description": "European weather radar data API.",
+        "url": "https://api.meteogate.eu/eu-eumetnet-weather-radar/",
+        "creator": { "@id": "https://meteogate.eu/#organization" },
+        "spatialCoverage": "Europe"
+      },
+      {
+        "@type": "Dataset",
+        "name": "MeteoAlarm Warnings",
+        "description": "European severe weather warnings API, based on the Common Alerting Protocol (CAP).",
+        "url": "https://api.meteogate.eu/warnings/",
+        "creator": { "@id": "https://meteogate.eu/#organization" },
+        "spatialCoverage": "Europe"
+      },
+      {
+        "@type": "Dataset",
+        "name": "Surface Observations (E-SOH)",
+        "description": "European surface weather observations API.",
+        "url": "https://api.meteogate.eu/eu-eumetnet-surface-observations",
+        "creator": { "@id": "https://meteogate.eu/#organization" },
+        "spatialCoverage": "Europe"
+      },
+      {
+        "@type": "Dataset",
+        "name": "Climate Observations",
+        "description": "European climate data API.",
+        "url": "https://api.meteogate.eu/eu-eumetnet-climate-observations/v1",
+        "creator": { "@id": "https://meteogate.eu/#organization" },
+        "spatialCoverage": "Europe"
+      }
+    ]
+  }
+  </script>
   <div id="main-container">
     <div id="service-bar" style="display:none;">
       <div id="service-bar-content"></div>
@@ -29,10 +107,10 @@
         <h1 class="text-white"><span class="text-sherpa400">Discover</span> and <span class="text-sherpa400">access</span> European meteorological data and information</h1>
       </div>
       <div id="content">
-        <h4 class="text-white">Featured European APIs providing data across Europe</h4>
+        <h2 class="text-white text-size-28">Featured European APIs providing data across Europe</h2>
         <div class="cards-container">
           <div class="card">
-            <h6><span class="text-sherpa400">Weather Radar</span></h6>
+            <h3 class="text-size-18"><span class="text-sherpa400">Weather Radar</span></h3>
             <div class="card-content">
               <a name="Link What is Open Radar Data API" href="https://eumetnet.github.io/openradardata-documentation/" target="_blank">
                 <div class="link">
@@ -65,7 +143,7 @@
             </div>
           </div>
           <div class="card">
-            <h6><span class="text-sherpa400">Warnings</span></h6>
+            <h3 class="text-size-18"><span class="text-sherpa400">Warnings</span></h3>
             <div class="card-content">
               <a name="Link What is Warnings API" href="https://api.meteoalarm.org/edr/v1/faq" target="_blank">
                 <div class="link">
@@ -98,7 +176,7 @@
             </div>
           </div>
           <div class="card">
-            <h6><span class="text-sherpa400">Surface Observations</span></h6>
+            <h3 class="text-size-18"><span class="text-sherpa400">Surface Observations</span></h3>
             <div class="card-content">
               <a name="link Surface observation API" href="https://api.meteogate.eu/eu-eumetnet-surface-observations" target="_blank">
                 <div class="link">
@@ -131,7 +209,7 @@
             </div>
           </div>
           <div class="card">
-            <h6><span class="text-sherpa400">Climate</span></h6>
+            <h3 class="text-size-18"><span class="text-sherpa400">Climate</span></h3>
             <div class="card-content">
               <a name="link Climate data API" href="https://api.meteogate.eu/eu-eumetnet-climate-observations/v1" target="_blank">
                 <div class="link">
@@ -158,7 +236,7 @@
         </div>
         <div id="secondary-content-right">
           <div id="data-explorer-content">
-            <h3 class="text-white">Data Explorer</h3>
+            <h2 class="text-white text-size-34">Data Explorer</h2>
             <div id="data-explorer-content-text">
 
               <p class="large text-white">Browse, preview and access meteorological data in one place.</p>
@@ -182,7 +260,7 @@
           <div class="third-content-box">
             <div class="third-content-box-title">
               <img class="third-content-box-title-icon" src="icons/binoculars.svg" alt="Binoculars Icon">
-              <h6 class="text-white">Overview</h6>
+              <h2 class="text-white text-size-18">Overview</h2>
             </div>
             <div class="third-content-box-content">
               <a name="Link Home" href="https://eumetnet.github.io/meteogate-documentation/" target="_blank">
@@ -241,7 +319,7 @@
           <div class="third-content-box">
             <div class="third-content-box-title">
               <img class="third-content-box-title-icon" src="icons/file-key-2.svg" alt="File Key Icon">
-              <h6 class="text-white">API keys</h6>
+              <h2 class="text-white text-size-18">API keys</h2>
             </div>
             <div class="third-content-box-content">
               <a name="Link Accessing Data" href="https://eumetnet.github.io/meteogate-documentation/2-discovering-and-accessing-data/#2-accessing-data" target="_blank">
@@ -265,7 +343,7 @@
           <div class="third-content-box">
             <div class="third-content-box-title">
               <img class="third-content-box-title-icon" src="icons/life-buoy.svg" alt="Life Buoy Icon">
-              <h6 class="text-white">Support</h6>
+              <h2 class="text-white text-size-18">Support</h2>
             </div>
             <div class="third-content-box-content">
               <a name="Link Service Notices" href="" target="_blank">
@@ -309,7 +387,7 @@
           <div class="third-content-box">
             <div class="third-content-box-title">
               <img class="third-content-box-title-icon" src="icons/users.svg" alt="Users Icon">
-              <h6 class="text-white">EUMETNET Members</h6>
+              <h2 class="text-white text-size-18">EUMETNET Members</h2>
             </div>
             <div class="third-content-box-content">
               <a name="Link Publishing data" href="https://eumetnet.github.io/meteogate-documentation/3-publishing-data/" target="_blank">
@@ -376,9 +454,7 @@
             <a name="Link France" class="flag" href="https://meteofrance.com" target="_blank">
               <img class="flag-icon" src="icons/flags/France (FR).svg" alt="France Flag">
             </a>
-            <a name="Link Germany" class="flag"
-              href="https://www.dwd.de/EN/Home/home_node.html;jsessionid=3C42CD2D7589C886EA813DFEB3B21D13.live21074"
-              target="_blank">
+            <a name="Link Germany" class="flag" href="https://www.dwd.de/EN/Home/home_node.html" target="_blank">
               <img class="flag-icon" src="icons/flags/Germany (DE).svg" alt="Germany Flag">
             </a>
             <a name="Link Greece" class="flag" href="https://emy.gr/en?area=forecast" target="_blank">
