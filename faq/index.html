@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frequently Asked Questions | MeteoGate</title>
-  <meta name="description" content="Answers to common questions about MeteoGate, EUMETNET's gateway to open European weather radar, warnings, surface observation and climate data APIs.">
+  <meta name="description" content="Answers to common questions about MeteoGate, EUMETNET's European meteorological dataspace for open weather radar, warnings, observation and climate data APIs.">
   <link rel="canonical" href="https://meteogate.eu/faq/">
 
   <link rel="icon" type="image/png" sizes="32x32" href="../icons/eumetnet_32x32.png">
@@ -19,12 +19,12 @@
   <meta property="og:url" content="https://meteogate.eu/faq/">
   <meta property="og:site_name" content="MeteoGate">
   <meta property="og:title" content="Frequently Asked Questions | MeteoGate">
-  <meta property="og:description" content="Answers to common questions about MeteoGate, EUMETNET's gateway to open European weather radar, warnings, surface observation and climate data APIs.">
+  <meta property="og:description" content="Answers to common questions about MeteoGate, EUMETNET's European meteorological dataspace for open weather radar, warnings, observation and climate data APIs.">
   <meta property="og:image" content="https://meteogate.eu/icons/eumetnet_270x270.png">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Frequently Asked Questions | MeteoGate">
-  <meta name="twitter:description" content="Answers to common questions about MeteoGate, EUMETNET's gateway to open European weather radar, warnings, surface observation and climate data APIs.">
+  <meta name="twitter:description" content="Answers to common questions about MeteoGate, EUMETNET's European meteorological dataspace for open weather radar, warnings, observation and climate data APIs.">
   <meta name="twitter:image" content="https://meteogate.eu/icons/eumetnet_270x270.png">
 
   <link rel="stylesheet" href="../main.css">
@@ -44,7 +44,7 @@
             "name": "What is MeteoGate?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "MeteoGate is EUMETNET's open gateway to meteorological data from 33 European national weather services, giving developers and researchers unified access to weather radar, warnings, surface observations and climate data through open APIs."
+              "text": "MeteoGate is EUMETNET's one-stop shop for official weather and climate data from across Europe. As a European meteorological dataspace, it gives developers and researchers unified access to weather radar, warnings, surface observations and climate data from national meteorological services through open APIs and a gateway interface."
             }
           },
           {
@@ -52,7 +52,15 @@
             "name": "Who can use MeteoGate's APIs?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "MeteoGate's APIs are open to developers, researchers, public authorities and businesses building applications or analysis that rely on European weather and climate data."
+              "text": "Anyone! MeteoGate's APIs are open to developers, researchers, public authorities and businesses building applications or analysis that rely on European weather and climate data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What data can I access through MeteoGate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MeteoGate provides access to a range of weather and climate data, including weather observations, radar data, warnings, and climate data. Available datasets depend on the contributing data providers."
             }
           },
           {
@@ -60,7 +68,7 @@
             "name": "Do I need an API key to access MeteoGate data?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No — an API key is not required to access most MeteoGate data, but registering for one through the API Key portal improves the service. Some restricted datasets require an API key for access."
+              "text": "Although an API key is not needed to access most data, registering for one through the API Key portal improves the service you receive. Some restricted datasets require an API key for access."
             }
           },
           {
@@ -68,7 +76,7 @@
             "name": "Is MeteoGate data free to use?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. MeteoGate provides open access to meteorological data from EUMETNET's member national meteorological services, in line with each dataset's published terms and conditions."
+              "text": "Yes. MeteoGate provides open access to meteorological data from EUMETNET's member national meteorological services, in line with each dataset's published terms and conditions. Check the licence or usage conditions for each dataset before using it."
             }
           },
           {
@@ -76,7 +84,15 @@
             "name": "Which countries does MeteoGate cover?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "MeteoGate covers data from the national meteorological services of 33 EUMETNET member countries across Europe."
+              "text": "MeteoGate brings together data from the 33 national meteorological services across Europe which are members of EUMETNET."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I explore data without writing code?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use the Data Explorer to discover datasets, preview available information and find links to access the data through APIs."
             }
           },
           {
@@ -86,6 +102,30 @@
               "@type": "Answer",
               "text": "The Data Explorer is a browser-based tool to preview and access MeteoGate's meteorological data without writing any code."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I access data through an API?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Browse available datasets through the MeteoGate Data Explorer and the MeteoGate portal, and follow the API links provided. Consult the relevant API documentation for endpoints, parameters and usage instructions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does MeteoGate store all the meteorological data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. MeteoGate provides a gateway to data supplied by national meteorological services and other providers. Data remains with the provider rather than being centrally stored by MeteoGate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the relationship between MeteoGate and EUMETNET?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MeteoGate is an EUMETNET initiative that makes meteorological data from European national meteorological services easier to discover and access through a common gateway."
+            }
           }
         ]
       }
@@ -93,9 +133,6 @@
   }
   </script>
   <div id="main-container">
-    <div id="service-bar" style="display:none;">
-      <div id="service-bar-content"></div>
-    </div>
     <div id="content-wrapper">
       <header style="display:contents">
         <div id="logo-container">
@@ -114,7 +151,7 @@
             </div>
           </a>
           <h1 class="text-white">Frequently Asked Questions</h1>
-          <p class="large text-white">Answers to common questions about MeteoGate, EUMETNET's gateway to open meteorological data.</p>
+          <p class="large text-white">Answers to common questions about MeteoGate, EUMETNET's one-stop shop for official weather and climate data from national meteorological services across Europe.</p>
         </div>
       </header>
       <main style="display:contents">
@@ -122,27 +159,47 @@
           <div class="faq-list">
             <div class="faq-item">
               <h2 class="text-white text-size-18">What is MeteoGate?</h2>
-              <p class="text-white">MeteoGate is EUMETNET's open gateway to meteorological data from European national weather services, giving developers and researchers unified access to weather radar, warnings, surface observations and climate data through open APIs and a gateway interface.</p>
+              <p class="text-white">MeteoGate is EUMETNET's one-stop shop for official weather and climate data from across Europe. As a European meteorological dataspace, it gives developers and researchers unified access to weather radar, warnings, surface observations and climate data from national meteorological services through open APIs and a gateway interface.</p>
             </div>
             <div class="faq-item">
               <h2 class="text-white text-size-18">Who can use MeteoGate's APIs?</h2>
-              <p class="text-white">MeteoGate's APIs are open to developers, researchers, public authorities and businesses building applications or analysis that rely on European weather and climate data.</p>
+              <p class="text-white">Anyone! MeteoGate's APIs are open to developers, researchers, public authorities and businesses building applications or analysis that rely on European weather and climate data.</p>
+            </div>
+            <div class="faq-item">
+              <h2 class="text-white text-size-18">What data can I access through MeteoGate?</h2>
+              <p class="text-white">MeteoGate provides access to a range of weather and climate data, including weather observations, radar data, warnings, and climate data. Available datasets depend on the contributing data providers.</p>
             </div>
             <div class="faq-item">
               <h2 class="text-white text-size-18">Do I need an API key to access MeteoGate data?</h2>
-              <p class="text-white">No — an API key is not required to access most MeteoGate data, but registering for one through the API Key portal improves the service. Some restricted datasets require an API key for access.</p>
+              <p class="text-white">Although an API key is not needed to access most data, registering for one through the API Key portal improves the service you receive. Some restricted datasets require an API key for access.</p>
             </div>
             <div class="faq-item">
               <h2 class="text-white text-size-18">Is MeteoGate data free to use?</h2>
-              <p class="text-white">Yes. MeteoGate provides open access to meteorological data from EUMETNET's member national meteorological services, in line with each dataset's published terms and conditions.</p>
+              <p class="text-white">Yes. MeteoGate provides open access to meteorological data from EUMETNET's member national meteorological services, in line with each dataset's published terms and conditions. Check the licence or usage conditions for each dataset before using it.</p>
             </div>
             <div class="faq-item">
               <h2 class="text-white text-size-18">Which countries does MeteoGate cover?</h2>
-              <p class="text-white">MeteoGate covers data from most of the national meteorological services across Europe.</p>
+              <p class="text-white">MeteoGate brings together data from the 33 national meteorological services across Europe which are members of EUMETNET.</p>
+            </div>
+            <div class="faq-item">
+              <h2 class="text-white text-size-18">How can I explore data without writing code?</h2>
+              <p class="text-white">Use the <b>Data Explorer</b> to discover datasets, preview available information and find links to access the data through APIs.</p>
             </div>
             <div class="faq-item">
               <h2 class="text-white text-size-18">What is the Data Explorer?</h2>
               <p class="text-white">The Data Explorer is a browser-based tool to preview and access MeteoGate's meteorological data without writing any code.</p>
+            </div>
+            <div class="faq-item">
+              <h2 class="text-white text-size-18">How do I access data through an API?</h2>
+              <p class="text-white">Browse available datasets through the MeteoGate Data Explorer and the MeteoGate portal, and follow the API links provided. Consult the relevant API documentation for endpoints, parameters and usage instructions.</p>
+            </div>
+            <div class="faq-item">
+              <h2 class="text-white text-size-18">Does MeteoGate store all the meteorological data?</h2>
+              <p class="text-white">No. MeteoGate provides a gateway to data supplied by national meteorological services and other providers. Data remains with the provider rather than being centrally stored by MeteoGate.</p>
+            </div>
+            <div class="faq-item">
+              <h2 class="text-white text-size-18">What is the relationship between MeteoGate and EUMETNET?</h2>
+              <p class="text-white">MeteoGate is an EUMETNET initiative that makes meteorological data from European national meteorological services easier to discover and access through a common gateway.</p>
             </div>
           </div>
         </div>
@@ -171,68 +228,6 @@
       </div>
     </footer>
   </div>
-  <script>
-    fetch('../notifications.json', { cache: 'no-cache' })
-      .then((response) => {
-        if (!response.ok) throw new Error('Failed to fetch notifications');
-        return response.json();
-      })
-      .then((notifications) => {
-        if (!Array.isArray(notifications)) return;
-        const now = Date.now();
-        const active = notifications.filter((n) =>
-          n.message && n.validUntilUtc && now <= new Date(n.validUntilUtc).getTime()
-        );
-        if (active.length === 0) return;
-
-        const serviceBar = document.getElementById('service-bar');
-        const serviceBarContent = document.getElementById('service-bar-content');
-
-        active.forEach((data) => {
-          const item = document.createElement('div');
-          item.className = 'service-bar-item';
-
-          const alertIcon = document.createElement('img');
-          alertIcon.src = '../icons/triangle-alert.svg';
-          alertIcon.alt = 'Triangle Alert Icon';
-          alertIcon.width = 24;
-          alertIcon.height = 24;
-          item.appendChild(alertIcon);
-
-          const p = document.createElement('p');
-          p.textContent = data.message;
-          if (data.linkText && data.linkUrl && /^https?:\/\//.test(data.linkUrl)) {
-            p.appendChild(document.createTextNode(' '));
-            const link = document.createElement('a');
-            link.className = 'text-black text-underline';
-            link.href = data.linkUrl;
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            link.textContent = data.linkText;
-            p.appendChild(link);
-          }
-          item.appendChild(p);
-
-          const closeBtn = document.createElement('button');
-          closeBtn.className = 'service-bar-close';
-          closeBtn.setAttribute('aria-label', 'Dismiss notification');
-          closeBtn.textContent = '×';
-          closeBtn.addEventListener('click', () => {
-            item.remove();
-            if (serviceBarContent.children.length === 0) {
-              serviceBar.style.display = 'none';
-            }
-          });
-          item.appendChild(closeBtn);
-
-          serviceBarContent.appendChild(item);
-        });
-        serviceBar.style.display = 'flex';
-      })
-      .catch((error) => {
-        console.error('Failed to load notifications:', error);
-      });
-  </script>
 </body>
 
 </html>
