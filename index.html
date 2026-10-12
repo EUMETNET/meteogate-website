@@ -28,7 +28,7 @@
   <meta name="twitter:description" content="MeteoGate is EUMETNET's gateway to the European meteorological dataspace — discover and access open weather radar, warnings, observations and climate APIs.">
   <meta name="twitter:image" content="https://meteogate.eu/icons/eumetnet_270x270.png">
 
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css?v=20261012">
 </head>
 
 <body>
@@ -233,6 +233,20 @@
         </div>
 
       </div>
+      <section id="api-key-content" aria-labelledby="api-key-heading">
+        <div id="api-key-content-text">
+          <div class="api-key-title">
+            <img src="icons/file-key-2.svg" alt="File Key Icon" width="32" height="32">
+            <h2 id="api-key-heading" class="text-white text-size-34">API keys</h2>
+          </div>
+          <p class="large text-white">Register through the API Key portal to improve the service you receive. Some restricted datasets require an API key for access.</p>
+        </div>
+        <div id="api-key-buttons-container">
+          <a class="primary large" name="Button Open API Key portal" href="https://devportal.meteogate.eu/" target="_blank" rel="noopener">
+            Get an API key
+          </a>
+        </div>
+      </section>
       <div id="secondary-content">
         <div id="secondary-content-left">
           <img src="images/data-explorer-placeholder.jpg" alt="Data Explorer Image" width="600" height="358" loading="lazy">
@@ -244,14 +258,12 @@
 
               <p class="large text-white">Browse, preview and access meteorological data in one place.</p>
               <div id="data-explorer-buttons-container">
-                <button type="button" class="primary large" name="Button Open Data Explorer"
-                  onclick="window.open('https://explorer.meteogate.eu/', '_blank')">
+                <a class="primary large" name="Button Open Data Explorer" href="https://explorer.meteogate.eu/" target="_blank" rel="noopener">
                   Open Data Explorer
-                </button>
-                <button type="button" class="secondary large" name="Data Explorer User Guide"
-                  onclick="window.open('https://github.com/EUMETNET/meteogate-documentation/blob/main/docs/Data%20Explorer%20User%20Guide%20v1.pdf', '_blank')">
+                </a>
+                <a class="secondary large" name="Data Explorer User Guide" href="https://github.com/EUMETNET/meteogate-documentation/blob/main/docs/Data%20Explorer%20User%20Guide%20v1.pdf" target="_blank" rel="noopener">
                   Data Explorer User Guide
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -314,30 +326,6 @@
                 <div class="link">
                   <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">References</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
-                </div>
-              </a>
-            </div>
-
-          </div>
-          <div class="third-content-box">
-            <div class="third-content-box-title">
-              <img class="third-content-box-title-icon" src="icons/file-key-2.svg" alt="File Key Icon" width="24" height="24" loading="lazy">
-              <h2 class="text-white text-size-18">API keys</h2>
-            </div>
-            <div class="third-content-box-content">
-              <a name="Link Accessing Data" href="https://eumetnet.github.io/meteogate-documentation/2-discovering-and-accessing-data/#2-accessing-data" target="_blank">
-                <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
-                  <p class="semibold">Accessing Data</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
-                </div>
-              </a>
-
-              <a name="Link API Key portal" href="https://devportal.meteogate.eu/" target="_blank">
-                <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
-                  <p class="semibold">API Key portal</p>
                   <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
