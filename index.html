@@ -4,147 +4,228 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MeteoGate</title>
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
+  <title>MeteoGate | Discover &amp; Access European Meteorological Data</title>
+  <meta name="description" content="MeteoGate is EUMETNET's gateway to the European meteorological dataspace — discover and access open weather radar, warnings, observations and climate APIs.">
+  <meta name="keywords" content="MeteoGate, EUMETNET, dataspace, meteorological dataspace, European weather data, open data, weather API, weather radar, weather warnings, surface observations, climate data">
+  <link rel="canonical" href="https://meteogate.eu/">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/eumetnet_32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/eumetnet_192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/eumetnet_180x180.png">
+  <meta name="msapplication-TileImage" content="icons/eumetnet_270x270.png">
+  <meta name="msapplication-TileColor" content="#009AA1">
+  <meta name="theme-color" content="#009AA1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://meteogate.eu/">
+  <meta property="og:site_name" content="MeteoGate">
+  <meta property="og:title" content="MeteoGate | Discover & Access European Meteorological Data">
+  <meta property="og:description" content="MeteoGate is EUMETNET's gateway to the European meteorological dataspace — discover and access open weather radar, warnings, observations and climate APIs.">
+  <meta property="og:image" content="https://meteogate.eu/icons/eumetnet_270x270.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MeteoGate | Discover & Access European Meteorological Data">
+  <meta name="twitter:description" content="MeteoGate is EUMETNET's gateway to the European meteorological dataspace — discover and access open weather radar, warnings, observations and climate APIs.">
+  <meta name="twitter:image" content="https://meteogate.eu/icons/eumetnet_270x270.png">
+
+  <link rel="stylesheet" href="main.css?v=20261012">
 </head>
 
 <body>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://meteogate.eu/#organization",
+        "name": "EUMETNET",
+        "url": "https://www.eumetnet.eu",
+        "logo": "https://meteogate.eu/logos/Eumetnet-logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://meteogate.eu/#website",
+        "url": "https://meteogate.eu/",
+        "name": "MeteoGate",
+        "description": "MeteoGate is EUMETNET's gateway to the European meteorological dataspace — discover and access open weather radar, warnings, observations and climate APIs.",
+        "publisher": { "@id": "https://meteogate.eu/#organization" },
+        "keywords": "dataspace, meteorological dataspace, European weather data, open data, weather API",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Dataset",
+        "name": "Open Radar Data (ORD)",
+        "description": "European weather radar data API.",
+        "url": "https://api.meteogate.eu/eu-eumetnet-weather-radar/",
+        "creator": { "@id": "https://meteogate.eu/#organization" },
+        "spatialCoverage": "Europe"
+      },
+      {
+        "@type": "Dataset",
+        "name": "MeteoAlarm Warnings",
+        "description": "European severe weather warnings API, based on the Common Alerting Protocol (CAP).",
+        "url": "https://api.meteogate.eu/warnings/",
+        "creator": { "@id": "https://meteogate.eu/#organization" },
+        "spatialCoverage": "Europe"
+      },
+      {
+        "@type": "Dataset",
+        "name": "Surface Observations (E-SOH)",
+        "description": "European surface weather observations API.",
+        "url": "https://api.meteogate.eu/eu-eumetnet-surface-observations",
+        "creator": { "@id": "https://meteogate.eu/#organization" },
+        "spatialCoverage": "Europe"
+      },
+      {
+        "@type": "Dataset",
+        "name": "Climate Observations",
+        "description": "European climate data API.",
+        "url": "https://api.meteogate.eu/eu-eumetnet-climate-observations/v1",
+        "creator": { "@id": "https://meteogate.eu/#organization" },
+        "spatialCoverage": "Europe"
+      }
+    ]
+  }
+  </script>
   <div id="main-container">
     <div id="service-bar" style="display:none;">
       <div id="service-bar-content"></div>
     </div>
     <div id="content-wrapper">
-      <div id="logo-container">
-        <div id="logo">
-          <img src="logos/Logo-MeteoGate-EUMETNET-(flat).svg" alt="MeteoGate Logo">
+      <header style="display:contents">
+        <div id="logo-container">
+          <div id="logo">
+            <img src="logos/Logo-MeteoGate-EUMETNET-(flat).svg" alt="MeteoGate Logo" width="179" height="40">
+          </div>
+          <div id="cofound-logo">
+            <img src="logos/EU-Co-funded-by-the-European-Union.png" alt="Co-funded by the European Union Logo" width="179" height="40">
+          </div>
         </div>
-        <div id="cofound-logo">
-          <img src="logos/EU-Co-funded-by-the-European-Union.png" alt="Co-funded by the European Union Logo">
-        </div>
-      </div>
 
-      <div id="header-container">
-        <h1 class="text-white"><span class="text-sherpa400">Discover</span> and <span class="text-sherpa400">access</span> European meteorological data and information</h1>
-      </div>
+        <div id="header-container">
+          <h1 class="text-white"><span class="text-sherpa400">Discover</span> and <span class="text-sherpa400">access</span> European meteorological data and information</h1>
+          <p class="large text-white">MeteoGate is the one-stop shop for official weather and climate data from across Europe. Built for developers, researchers and services, the meteorological dataspace lets you discover, explore and access National Meteorological Services' data through a consistent set of open APIs.</p>
+        </div>
+      </header>
+      <main style="display:contents">
       <div id="content">
-        <h4 class="text-white">Featured European APIs providing data across Europe</h4>
+        <h2 class="text-white text-size-28">Featured European APIs providing data across Europe</h2>
         <div class="cards-container">
           <div class="card">
-            <h6><span class="text-sherpa400">Weather Radar</span></h6>
+            <h3 class="text-size-18"><span class="text-sherpa400">Weather Radar</span></h3>
             <div class="card-content">
               <a name="Link What is Open Radar Data API" href="https://eumetnet.github.io/openradardata-documentation/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" />
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24" />
                   <p class="semibold">What is Open Radar Data (ORD) API</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
              <a name="Link Open Radar Data API" href="https://api.meteogate.eu/eu-eumetnet-weather-radar/docs" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Open Radar Data API</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link How to download weather radar data" href="https://eumetnet.github.io/openradardata-documentation/2-ORD-API-discovering-and-accessing-data/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">How to download weather radar data</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link How to publish weather radar data (EUMETNET Members only)" href="https://eumetnet.github.io/openradardata-documentation/3-ORD-API-publishing-data/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">How to publish weather radar data (EUMETNET Members only)</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
             </div>
           </div>
           <div class="card">
-            <h6><span class="text-sherpa400">Warnings</span></h6>
+            <h3 class="text-size-18"><span class="text-sherpa400">Warnings</span></h3>
             <div class="card-content">
-              <a name="Link What is Warnings API" href="https://api.meteoalarm.org/edr/v1/faq" target="_blank">
+              <a name="Link What is Warnings API" href="https://api.meteogate.eu/warnings/faq" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">What is Warnings API</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
-              <a name="Link How to get started" href="https://api.meteoalarm.org/edr/v1" target="_blank">
+              <a name="Link Warnings API" href="https://api.meteogate.eu/warnings/?f=json" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
-                  <p class="semibold">How to get started</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
+                  <p class="semibold">Warnings API</p>
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
-              <a name="Link How to download warning data" href="https://api.meteoalarm.org/edr/v1/docs" target="_blank">
+              <a name="Link How to download warning data" href="https://api.meteogate.eu/warnings/docs" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">How to download warning data</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link What is CAP" href="https://gitlab.com/meteoalarm-pm-group/documents/-/raw/master/MeteoAlarm_CAP_Profile_v2.0.pdf?inline=true" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">What is CAP</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
             </div>
           </div>
           <div class="card">
-            <h6><span class="text-sherpa400">Surface Observations</span></h6>
+            <h3 class="text-size-18"><span class="text-sherpa400">Surface Observations</span></h3>
             <div class="card-content">
               <a name="link Surface observation API" href="https://api.meteogate.eu/eu-eumetnet-surface-observations" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Surface observation API</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="link Surface Observation API How to get started" href="https://github.com/EUMETNET/e-soh-documentation/wiki/1.-Get-started" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">How to get started</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="link Surface observation API How to ingest data" href="https://github.com/EUMETNET/e-soh-documentation/wiki/2.-E%E2%80%90SOH-Ingest" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">How to ingest data</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="link Surface Observation API How to download data" href="https://github.com/EUMETNET/e-soh-documentation/wiki/3.-Retrieve-data-from-API" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">How to download data</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
             </div>
           </div>
           <div class="card">
-            <h6><span class="text-sherpa400">Climate</span></h6>
+            <h3 class="text-size-18"><span class="text-sherpa400">Climate</span></h3>
             <div class="card-content">
               <a name="link Climate data API" href="https://api.meteogate.eu/eu-eumetnet-climate-observations/v1" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Climate data API</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="link Climate data API How to get started" href="https://api.meteogate.eu/eu-eumetnet-climate-observations/v1/docs" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">How to get started</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
             </div>
@@ -152,87 +233,100 @@
         </div>
 
       </div>
+      <section id="api-key-content" aria-labelledby="api-key-heading">
+        <div id="api-key-content-text">
+          <div class="api-key-title">
+            <img src="icons/file-key-2.svg" alt="File Key Icon" width="32" height="32">
+            <h2 id="api-key-heading" class="text-white text-size-34">API keys</h2>
+          </div>
+          <p class="large text-white">Register through the API Key portal to improve the service you receive. Some restricted datasets require an API key for access.</p>
+        </div>
+        <div id="api-key-buttons-container">
+          <a class="primary large" name="Button Open API Key portal" href="https://devportal.meteogate.eu/" target="_blank" rel="noopener">
+            Get an API key
+          </a>
+        </div>
+      </section>
       <div id="secondary-content">
         <div id="secondary-content-left">
-          <img src="images/data-explorer-placeholder.jpg" alt="Data Explorer Image">
+          <img src="images/data-explorer-placeholder.jpg" alt="Data Explorer Image" width="600" height="358" loading="lazy">
         </div>
         <div id="secondary-content-right">
           <div id="data-explorer-content">
-            <h3 class="text-white">Data Explorer</h3>
+            <h2 class="text-white text-size-34">Data Explorer</h2>
             <div id="data-explorer-content-text">
 
               <p class="large text-white">Browse, preview and access meteorological data in one place.</p>
               <div id="data-explorer-buttons-container">
-                <button type="button" class="primary large" name="Button Open Data Explorer"
-                  onclick="window.open('https://explorer.meteogate.eu/', '_blank')">
+                <a class="primary large" name="Button Open Data Explorer" href="https://explorer.meteogate.eu/" target="_blank" rel="noopener">
                   Open Data Explorer
-                </button>
-                <button type="button" class="secondary large" name="Data Explorer User Guide"
-                  onclick="window.open('https://github.com/EUMETNET/meteogate-documentation/blob/main/docs/Data%20Explorer%20User%20Guide%20v1.pdf', '_blank')">
+                </a>
+                <a class="secondary large" name="Data Explorer User Guide" href="https://github.com/EUMETNET/meteogate-documentation/blob/main/docs/Data%20Explorer%20User%20Guide%20v1.pdf" target="_blank" rel="noopener">
                   Data Explorer User Guide
-                </button>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
       </div>
-      <div id="third-content">
+      </main>
+      <nav id="third-content" aria-label="Resources and support">
         <div id="content-row">
           <div class="third-content-box">
             <div class="third-content-box-title">
-              <img class="third-content-box-title-icon" src="icons/binoculars.svg" alt="Binoculars Icon">
-              <h6 class="text-white">Overview</h6>
+              <img class="third-content-box-title-icon" src="icons/binoculars.svg" alt="Binoculars Icon" width="24" height="24" loading="lazy">
+              <h2 class="text-white text-size-18">Overview</h2>
             </div>
             <div class="third-content-box-content">
               <a name="Link Home" href="https://eumetnet.github.io/meteogate-documentation/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Home</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link Overview" href="https://eumetnet.github.io/meteogate-documentation/1-overview/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Overview</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
 
               <a name="Link Discovering and Accessing Data" href="https://eumetnet.github.io/meteogate-documentation/2-discovering-and-accessing-data/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Discovering and Accessing Data</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link Architecture" href="https://eumetnet.github.io/meteogate-documentation/technical-architecture/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Architecture</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link Terms and conditions" href="https://eumetnet.github.io/meteogate-documentation/references/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Terms and conditions</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link Glossary" href="https://eumetnet.github.io/meteogate-documentation/glossary/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Glossary</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link References" href="https://eumetnet.github.io/meteogate-documentation/references/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">References</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
             </div>
@@ -240,67 +334,50 @@
           </div>
           <div class="third-content-box">
             <div class="third-content-box-title">
-              <img class="third-content-box-title-icon" src="icons/file-key-2.svg" alt="File Key Icon">
-              <h6 class="text-white">API keys</h6>
+              <img class="third-content-box-title-icon" src="icons/life-buoy.svg" alt="Life Buoy Icon" width="24" height="24" loading="lazy">
+              <h2 class="text-white text-size-18">Support</h2>
             </div>
             <div class="third-content-box-content">
-              <a name="Link Accessing Data" href="https://eumetnet.github.io/meteogate-documentation/2-discovering-and-accessing-data/#2-accessing-data" target="_blank">
+              <a name="Link Service Notices" href="https://github.com/orgs/Meteogate/discussions/categories/announcements" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
-                  <p class="semibold">Accessing Data</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
-                </div>
-              </a>
-
-              <a name="Link API Key portal" href="https://devportal.meteogate.eu/" target="_blank">
-                <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
-                  <p class="semibold">API Key portal</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
-                </div>
-              </a>
-            </div>
-
-          </div>
-          <div class="third-content-box">
-            <div class="third-content-box-title">
-              <img class="third-content-box-title-icon" src="icons/life-buoy.svg" alt="Life Buoy Icon">
-              <h6 class="text-white">Support</h6>
-            </div>
-            <div class="third-content-box-content">
-              <a name="Link Service Notices" href="" target="_blank">
-                <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Service Notices</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link Documentation" href="https://eumetnet.github.io/meteogate-documentation/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Documentation</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
+                </div>
+              </a>
+              <a name="Link FAQ" href="faq/">
+                <div class="link">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
+                  <p class="semibold">FAQ</p>
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link Discussion Forum" href="https://github.com/orgs/Meteogate/discussions" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Discussion Forum</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link Service Desk" href="https://ilmatieteenlaitos.atlassian.net/jira/core/form/83953b5d-a13d-4a66-bb40-7fdfd1a1f2a4" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Service Desk contact</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link Glossary" href="https://eumetnet.github.io/meteogate-documentation/glossary/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Glossary</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
             </div>
@@ -308,38 +385,38 @@
           </div>
           <div class="third-content-box">
             <div class="third-content-box-title">
-              <img class="third-content-box-title-icon" src="icons/users.svg" alt="Users Icon">
-              <h6 class="text-white">EUMETNET Members</h6>
+              <img class="third-content-box-title-icon" src="icons/users.svg" alt="Users Icon" width="24" height="24" loading="lazy">
+              <h2 class="text-white text-size-18">EUMETNET Members</h2>
             </div>
             <div class="third-content-box-content">
               <a name="Link Publishing data" href="https://eumetnet.github.io/meteogate-documentation/3-publishing-data/" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">Publishing data</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
               <a name="Link FEMDI Programme" href="https://tlnt19059.sharepoint.com/sites/FEMDI/FEMDI Communications/Forms/AllItems.aspx" target="_blank">
                 <div class="link">
-                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon">
+                  <img class="icon" src="icons/arrow-right.svg" alt="Arrow Right Icon" width="24" height="24">
                   <p class="semibold">FEMDI Programme</p>
-                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+                  <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
                 </div>
               </a>
             </div>
           </div>
         </div>
-      </div>
+      </nav>
 
     </div>
-    <div id="footer-container">
+    <footer id="footer-container">
       <div id="footer-content">
         <div class="footer-row">
-          <img id="footer-logo" src="logos/Eumetnet-logo.svg" alt="EUMETNET Logo">
+          <img id="footer-logo" src="logos/Eumetnet-logo.svg" alt="EUMETNET Logo" width="219" height="40" loading="lazy">
           <a name="Link Contact information" href="https://www.eumetnet.eu" target="_blank">
             <div class="link">
               <p class="text-sherpa400">Contact information</p>
-              <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+              <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
             </div>
           </a>
         </div>
@@ -350,105 +427,103 @@
           </div>
           <div id="flags-container">
             <a name="Link Austria" class="flag" href="https://geosphere.at/en" target="_blank">
-              <img class="flag-icon" src="icons/flags/Austria (AT).svg" alt="Austria Flag">
+              <img class="flag-icon" src="icons/flags/Austria (AT).svg" alt="Austria Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Belgium" class="flag" href="https://www.meteo.be/en/belgium" target="_blank">
-              <img class="flag-icon" src="icons/flags/Belgium (BE).svg" alt="Belgium Flag">
+              <img class="flag-icon" src="icons/flags/Belgium (BE).svg" alt="Belgium Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Croatia" class="flag" href="https://meteo.hr/index_en.php" target="_blank">
-              <img class="flag-icon" src="icons/flags/Croatia (HR).svg" alt="Croatia Flag">
+              <img class="flag-icon" src="icons/flags/Croatia (HR).svg" alt="Croatia Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Cyprus" class="flag" href="https://www.moa.gov.cy/moa/dm/dm.nsf/home_en/home_en?openform" target="_blank">
-              <img class="flag-icon" src="icons/flags/Cyprus (CY).svg" alt="Cyprus Flag">
+              <img class="flag-icon" src="icons/flags/Cyprus (CY).svg" alt="Cyprus Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Czech Republic" class="flag" href="https://www.chmi.cz/?l=en" target="_blank">
-              <img class="flag-icon" src="icons/flags/Czech Republic (CZ).svg" alt="Czech Republic Flag">
+              <img class="flag-icon" src="icons/flags/Czech Republic (CZ).svg" alt="Czech Republic Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Denmark" class="flag" href="https://www.dmi.dk" target="_blank">
-              <img class="flag-icon" src="icons/flags/Denmark (DK).svg" alt="Denmark Flag">
+              <img class="flag-icon" src="icons/flags/Denmark (DK).svg" alt="Denmark Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Estonia" class="flag" href="https://www.ilmateenistus.ee/?lang=en" target="_blank">
-              <img class="flag-icon" src="icons/flags/Estonia (EE).svg" alt="Estonia Flag">
+              <img class="flag-icon" src="icons/flags/Estonia (EE).svg" alt="Estonia Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Finland" class="flag" href="https://en.ilmatieteenlaitos.fi" target="_blank">
-              <img class="flag-icon" src="icons/flags/Finland (FI).svg" alt="Finland Flag">
+              <img class="flag-icon" src="icons/flags/Finland (FI).svg" alt="Finland Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link France" class="flag" href="https://meteofrance.com" target="_blank">
-              <img class="flag-icon" src="icons/flags/France (FR).svg" alt="France Flag">
+              <img class="flag-icon" src="icons/flags/France (FR).svg" alt="France Flag" width="32" height="24" loading="lazy">
             </a>
-            <a name="Link Germany" class="flag"
-              href="https://www.dwd.de/EN/Home/home_node.html;jsessionid=3C42CD2D7589C886EA813DFEB3B21D13.live21074"
-              target="_blank">
-              <img class="flag-icon" src="icons/flags/Germany (DE).svg" alt="Germany Flag">
+            <a name="Link Germany" class="flag" href="https://www.dwd.de/EN/Home/home_node.html" target="_blank">
+              <img class="flag-icon" src="icons/flags/Germany (DE).svg" alt="Germany Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Greece" class="flag" href="https://emy.gr/en?area=forecast" target="_blank">
-              <img class="flag-icon" src="icons/flags/Greece (GR).svg" alt="Greece Flag">
+              <img class="flag-icon" src="icons/flags/Greece (GR).svg" alt="Greece Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Hungary" class="flag" href="https://www.met.hu/en/idojaras/" target="_blank">
-              <img class="flag-icon" src="icons/flags/Hungary (HU).svg" alt="Hungary Flag">
+              <img class="flag-icon" src="icons/flags/Hungary (HU).svg" alt="Hungary Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Iceland" class="flag" href="https://en.vedur.is" target="_blank">
-              <img class="flag-icon" src="icons/flags/Iceland (IS).svg" alt="Iceland Flag">
+              <img class="flag-icon" src="icons/flags/Iceland (IS).svg" alt="Iceland Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Ireland" class="flag" href="https://www.met.ie" target="_blank">
-              <img class="flag-icon" src="icons/flags/Ireland (IE).svg" alt="Ireland Flag">
+              <img class="flag-icon" src="icons/flags/Ireland (IE).svg" alt="Ireland Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Italy" class="flag" href="https://www.meteoam.it/it/home" target="_blank">
-              <img class="flag-icon" src="icons/flags/Italy (IT).svg" alt="Italy Flag">
+              <img class="flag-icon" src="icons/flags/Italy (IT).svg" alt="Italy Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Latvia" class="flag" href="https://videscentrs.lvgmc.lv" target="_blank">
-              <img class="flag-icon" src="icons/flags/Latvia (LV).svg" alt="Latvia Flag">
+              <img class="flag-icon" src="icons/flags/Latvia (LV).svg" alt="Latvia Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Lithuania" class="flag" href="https://www.meteo.lt/en/" target="_blank">
-              <img class="flag-icon" src="icons/flags/Lithuania (LT).svg" alt="Lithuania Flag">
+              <img class="flag-icon" src="icons/flags/Lithuania (LT).svg" alt="Lithuania Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Luxembourg" class="flag" href="https://www.meteolux.lu" target="_blank">
-              <img class="flag-icon" src="icons/flags/Luxembourg (LU).svg" alt="Luxembourg Flag">
+              <img class="flag-icon" src="icons/flags/Luxembourg (LU).svg" alt="Luxembourg Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Malta" class="flag" href="https://www.maltairport.com/weather/" target="_blank">
-              <img class="flag-icon" src="icons/flags/Malta (MT).svg" alt="Malta Flag">
+              <img class="flag-icon" src="icons/flags/Malta (MT).svg" alt="Malta Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Montenegro" class="flag" href="https://www.meteo.co.me" target="_blank">
-              <img class="flag-icon" src="icons/flags/Montenegro (ME).svg" alt="Montenegro Flag">
+              <img class="flag-icon" src="icons/flags/Montenegro (ME).svg" alt="Montenegro Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Netherlands" class="flag" href="https://www.knmi.nl/home" target="_blank">
-              <img class="flag-icon" src="icons/flags/Netherlands (NL).svg" alt="Netherlands Flag">
+              <img class="flag-icon" src="icons/flags/Netherlands (NL).svg" alt="Netherlands Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Norway" class="flag" href="https://www.met.no/en" target="_blank">
-              <img class="flag-icon" src="icons/flags/Norway (NO).svg" alt="Norway Flag">
+              <img class="flag-icon" src="icons/flags/Norway (NO).svg" alt="Norway Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Poland" class="flag" href="https://imgw.pl/en/" target="_blank">
-              <img class="flag-icon" src="icons/flags/Poland (PL).svg" alt="Poland Flag">
+              <img class="flag-icon" src="icons/flags/Poland (PL).svg" alt="Poland Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Portugal" class="flag" href="https://www.ipma.pt/en/" target="_blank">
-              <img class="flag-icon" src="icons/flags/Portugal (PT).svg" alt="Portugal Flag">
+              <img class="flag-icon" src="icons/flags/Portugal (PT).svg" alt="Portugal Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Serbia" class="flag" href="https://www.hidmet.gov.rs/index_eng.php" target="_blank">
-              <img class="flag-icon" src="icons/flags/Serbia (RS).svg" alt="Serbia Flag">
+              <img class="flag-icon" src="icons/flags/Serbia (RS).svg" alt="Serbia Flag" width="32" height="24" loading="lazy">
             </a>
            <a name="Link North Macedonia" class="flag" href="https://uhmr.gov.mk/" target="_blank">
-              <img class="flag-icon" src="icons/flags/North Macedonia (MK).svg" alt="North Macedonia Flag">
+              <img class="flag-icon" src="icons/flags/North Macedonia (MK).svg" alt="North Macedonia Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Romania" class="flag" href="https://www.meteoromania.ro" target="_blank">
-              <img class="flag-icon" src="icons/flags/Romania (RO).svg" alt="Romania Flag">
+              <img class="flag-icon" src="icons/flags/Romania (RO).svg" alt="Romania Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Slovakia" class="flag" href="https://www.shmu.sk/en/?page=1" target="_blank">
-              <img class="flag-icon" src="icons/flags/Slovakia (SK).svg" alt="Slovakia Flag">
+              <img class="flag-icon" src="icons/flags/Slovakia (SK).svg" alt="Slovakia Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Slovenia" class="flag" href="https://meteo.arso.gov.si/met/en/" target="_blank">
-              <img class="flag-icon" src="icons/flags/Slovenia (SI).svg" alt="Slovenia Flag">
+              <img class="flag-icon" src="icons/flags/Slovenia (SI).svg" alt="Slovenia Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Spain" class="flag" href="https://www.aemet.es/en/portada" target="_blank">
-              <img class="flag-icon" src="icons/flags/Spain (ES).svg" alt="Spain Flag">
+              <img class="flag-icon" src="icons/flags/Spain (ES).svg" alt="Spain Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Sweden" class="flag" href="https://www.smhi.se/en" target="_blank">
-              <img class="flag-icon" src="icons/flags/Sweden (SE).svg" alt="Sweden Flag">
+              <img class="flag-icon" src="icons/flags/Sweden (SE).svg" alt="Sweden Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link Switzerland" class="flag" href="https://www.meteoswiss.admin.ch/#tab=forecast-map" target="_blank">
-              <img class="flag-icon" src="icons/flags/Switzerland (CH).svg" alt="Switzerland Flag">
+              <img class="flag-icon" src="icons/flags/Switzerland (CH).svg" alt="Switzerland Flag" width="32" height="24" loading="lazy">
             </a>
             <a name="Link United Kingdom" class="flag" href="https://www.metoffice.gov.uk" target="_blank">
-              <img class="flag-icon" src="icons/flags/United Kingdom (GB).svg" alt="United Kingdom Flag">
+              <img class="flag-icon" src="icons/flags/United Kingdom (GB).svg" alt="United Kingdom Flag" width="32" height="24" loading="lazy">
             </a>
           </div>
         </div>
@@ -457,12 +532,12 @@
           <a name="Link Legal information" href="https://www.eumetnet.eu/legal-information" target="_blank">
             <div class="link">
               <p class="text-sherpa400">Legal information</p>
-              <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon">
+              <img class="icon" src="icons/newtab.svg" alt="Opens in new tab icon" width="24" height="24">
             </div>
           </a>
         </div>
       </div>
-    </div>
+    </footer>
   </div>
   <script>
     fetch('notifications.json', { cache: 'no-cache' })
@@ -488,6 +563,8 @@
           const alertIcon = document.createElement('img');
           alertIcon.src = 'icons/triangle-alert.svg';
           alertIcon.alt = 'Triangle Alert Icon';
+          alertIcon.width = 24;
+          alertIcon.height = 24;
           item.appendChild(alertIcon);
 
           const p = document.createElement('p');

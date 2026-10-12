@@ -1,3 +1,56 @@
+/* Self-hosted fonts (Exo 2 SemiBold, Heebo Regular/SemiBold) - replaces loading
+   them live from Google Fonts at request time, which also sent every visitor's
+   IP to Google on each page load. Subsetted to latin + latin-ext only (no
+   cyrillic/hebrew/etc. - this site is English-only). */
+@font-face {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/exo2-600-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/exo2-600-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/heebo-400-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/heebo-400-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/heebo-600-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/heebo-600-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 /* Colors */
 :root {
   --color-sherpa100: #D9F4F4;
@@ -168,7 +221,24 @@ h6 {
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
-  line-height: 24px; 
+  line-height: 24px;
+}
+
+/* Decoupled heading sizes: lets a tag's semantic level (h1-h6, document order)
+   differ from its visual size (set via these classes) */
+.text-size-34 {
+  font-size: 34px;
+  line-height: 40px;
+}
+
+.text-size-28 {
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.text-size-18 {
+  font-size: 18px;
+  line-height: 24px;
 }
 
 p {
@@ -250,7 +320,9 @@ a:focus {
   border: 2px solid var(--color-yellow, #F1B828);
 }
 
-button.primary.large {
+a.primary.large {
+  transition: background-color 150ms ease, border-color 150ms ease;
+  text-align: center;
   display: flex;
   flex: 1 0 0;
   padding: 14px 24px;
@@ -262,6 +334,7 @@ button.primary.large {
   background: var(--color-white, #FFF);
   color: var(--color-sherpa800, #004F59);
   align-self: stretch;
+  box-sizing: border-box;
   /* p semibold */
   font-family: Heebo;
   font-size: 16px;
@@ -269,20 +342,25 @@ button.primary.large {
   line-height: 24px; /* 150% */
 }
 
-button.primary.large:hover {
-  background: var(--color-sherpa200, #B3E8E9);
+/* Override the global a:focus border so buttons keep their 4px border when clicked */
+a.primary.large:focus,
+a.secondary.large:focus {
+  border: 4px solid var(--color-white, #FFF);
 }
 
-button.primary.large:active {
+a.primary.large:hover {
+  border-color: var(--color-sherpa200, #B8E8E9);
+  background: var(--color-sherpa200, #B8E8E9);
+}
+
+a.primary.large:active {
+  border-color: var(--color-sherpa300, #86D6DA);
   background: var(--color-sherpa300, #86D6DA);
 }
 
-button.primary.large:focus-visible {
-  border-radius: 4px;
-  border: 4px solid var(--color-yellow, #F1B828);
-}
-
-button.secondary.large {
+a.secondary.large {
+  transition: background-color 150ms ease, border-color 150ms ease;
+  text-align: center;
   display: flex;
   flex: 1 0 0;
   padding: 14px 24px;
@@ -303,20 +381,24 @@ button.secondary.large {
   line-height: 24px; /* 150% */
 }
 
-button.secondary.large:hover {
-  border-width: 2px;
-  padding: 15px 27px 17px 25px;
+a.secondary.large:hover {
+  background: var(--color-sherpa700, #0C646D);
 }
 
-
-button.secondary.large:active {
-  border-width: 3px;
-  padding: 16px 25px;
+a.secondary.large:active {
+  background: var(--color-sherpa600, #087A82);
 }
 
-button.secondary.large:focus-visible {
-  border-radius: 4px;
-  border: 4px solid var(--color-yellow, #F1B828);
+a.primary.large:focus-visible,
+a.secondary.large:focus-visible {
+  border-color: var(--color-yellow, #F1B828);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.primary.large,
+  a.secondary.large {
+    transition: none;
+  }
 }
 
 #main-container {
@@ -404,6 +486,30 @@ button.secondary.large:focus-visible {
   align-self: stretch;
   gap: 24px;
   flex-wrap: nowrap;
+}
+
+#faq-content {
+  display: flex;
+  padding-top: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+  border-top: 1px solid var(--color-white, #FFF);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: stretch;
 }
 
 .card {
@@ -507,6 +613,37 @@ button.secondary.large:focus-visible {
   gap: 24px;
 }  
 
+#api-key-content {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 48px 72px;
+  border-radius: 4px;
+  border: 1px solid var(--color-sherpa600, #087A82);
+  background: var(--color-sherpa800, #004F59);
+}
+
+#api-key-content-text {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.api-key-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#api-key-buttons-container {
+  display: flex;
+  flex: 0 0 240px;
+  gap: 24px;
+}
+
 #third-content {
   display: flex;
   align-self: stretch;
@@ -580,8 +717,9 @@ button.secondary.large:focus-visible {
   gap: 40px;
   padding: 0 40px;
   align-items: center;
+  box-sizing: border-box;
+  width: 100%;
   max-width: 1280px;
-  align-self: center;
   margin: 0 auto;
 }
 
@@ -716,9 +854,23 @@ button.secondary.large:focus-visible {
     width: 100%;
   }
 
-  #data-explorer-buttons-container button {
+  #data-explorer-buttons-container a {
     width: 100%;
     justify-content: center;
+  }
+
+  #api-key-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 40px;
+  }
+
+  #api-key-buttons-container {
+    flex: 1 1 auto;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
   }
 
   #content-row {
@@ -790,9 +942,23 @@ button.secondary.large:focus-visible {
     gap: 16px;
   }
 
-  #data-explorer-buttons-container button {
+  #data-explorer-buttons-container a {
     width: 100%;
     justify-content: center;
+  }
+
+  #api-key-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  #api-key-buttons-container {
+    flex: 1 1 auto;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
   }
 
   #secondary-content-left,

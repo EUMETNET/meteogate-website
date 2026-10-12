@@ -1,0 +1,30 @@
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Node (local tooling, e.g. linters or dev servers)
+node_modules/
+npm-debug.log*
+.npm/
+
+# Logs & temp files
+*.log
+*.tmp
+tmp/
