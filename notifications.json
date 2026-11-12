@@ -11,6 +11,6 @@
   },
   {
     "validUntilUtc": "2026-11-15T00:00:00Z",
-    "message": "MeteoGate is currently experiencing issues with its cloud service provider, which is affecting the availability of some services. We’re working hard to resolve the impacts as soon as possible. As a precaution all existing apikeys have been nullified and you can request a new one from the MeteoGate portal. We’re sorry for any issues this is causing you."
+    "message": "MeteoGate is currently experiencing issues with its cloud service provider, which is affecting the availability of some services. We’re working hard to resolve the impacts as soon as possible. As a precaution all existing apikeys will be nullified and you can request a new one from the MeteoGate portal. We’re sorry for any issues this is causing you."
   }
 ]
